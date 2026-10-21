@@ -7,11 +7,11 @@ const { currentPath = '/' } = Astro.props;
 
 const navItems = [
   { name: 'Inicio', path: '/' },
-  { name: 'Productos', path: '/productos' },
-  { name: 'Soporte & Garantía', path: '/soporte' },
-  { name: 'Compras', path: '/compras' },
-  { name: 'Nosotros', path: '/nosotros' },
-  { name: 'Contacto', path: '/contacto' },
+  { name: 'Productos', path: '/productos/' },
+  { name: 'Soporte & Garantía', path: '/soporte/' },
+  { name: 'Compras', path: '/compras/' },
+  { name: 'Nosotros', path: '/nosotros/' },
+  { name: 'Contacto', path: '/contacto/' },
 ];
 ---
 
@@ -26,8 +26,8 @@ const navItems = [
         <span>✉️ ventas@evuus.com</span>
       </div>
       <div class="top-links">
-        <a href="/soporte#garantia">Garantía Oficial</a>
-        <a href="/soporte#drivers">Drivers & Descargas</a>
+        <a href="/garantia/">Garantía Oficial</a>
+        <a href="/drivers/">Drivers & Descargas</a>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@ const navItems = [
         {navItems.map((item) => (
           <a
             href={item.path}
-            class={`nav-link ${currentPath === item.path ? 'active' : ''}`}
+            class={`nav-link ${currentPath === item.path || (currentPath !== '/' && item.path !== '/' && currentPath.startsWith(item.path.replace(/\/$/, ''))) ? 'active' : ''}`}
           >
             {item.name}
           </a>
@@ -50,7 +50,7 @@ const navItems = [
       </nav>
 
       <div class="nav-actions">
-        <a href="/contacto" class="btn btn-primary btn-sm">Cotizar Equipos</a>
+        <a href="/contacto/" class="btn btn-primary btn-sm">Cotizar Equipos</a>
         <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
