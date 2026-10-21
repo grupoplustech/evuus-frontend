@@ -34,15 +34,8 @@ const navItems = [
 
   <div class="main-nav">
     <div class="container nav-container">
-      <a href="/" class="logo">
-        <div class="logo-mark">
-          <span class="logo-letter">E</span>
-          <div class="logo-accent"></div>
-        </div>
-        <div class="logo-text-group">
-          <span class="logo-title">EVUUS</span>
-          <span class="logo-subtitle">ELECTRONICS & COMPUTERS</span>
-        </div>
+      <a href="/" class="logo" aria-label="EVUUS Electronics">
+        <img src="/images/logo.svg" alt="EVUUS Electronics" class="site-logo-img" />
       </a>
 
       <nav class="desktop-nav">
@@ -149,57 +142,19 @@ const navItems = [
   .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
-  .logo-mark {
-    width: 42px;
-    height: 42px;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0 4px 10px var(--accent-glow);
+  .logo:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
   }
 
-  .logo-letter {
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: -0.05em;
-  }
-
-  .logo-accent {
-    position: absolute;
-    bottom: -2px;
-    right: -2px;
-    width: 10px;
-    height: 10px;
-    background: #00e5ff;
-    border-radius: 50%;
-    border: 2px solid var(--white);
-  }
-
-  .logo-text-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .logo-title {
-    font-size: 1.4rem;
-    font-weight: 900;
-    letter-spacing: 0.15em;
-    color: var(--dark);
-    line-height: 1.1;
-  }
-
-  .logo-subtitle {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--primary);
+  .site-logo-img {
+    height: 44px;
+    width: auto;
+    display: block;
   }
 
   .desktop-nav {

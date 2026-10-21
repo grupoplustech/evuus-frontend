@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <radialGradient id="favSphere" cx="35%" cy="30%" r="65%" fx="30%" fy="25%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="75%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </radialGradient>
+    <linearGradient id="favDumbbell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#7dd3fc" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#075985" />
+    </linearGradient>
+  </defs>
+  <circle cx="18" cy="15" r="12" fill="url(#favSphere)" />
+  <path d="M 43 8.5 A 11.5 11.5 0 0 1 63.5 18 C 61 24, 52 28, 45 35 A 12 12 0 0 1 22.5 49 A 12 12 0 0 1 33.5 35 C 37 30, 41 21, 43 8.5 Z" fill="url(#favDumbbell)" />
+</svg>

@@ -6,8 +6,9 @@ const year = new Date().getFullYear();
   <div class="container footer-grid">
     <div class="footer-col brand-col">
       <div class="footer-logo">
-        <span class="logo-text">EVUUS</span>
-        <span class="logo-sub">ELECTRONICS</span>
+        <a href="/" aria-label="EVUUS Electronics">
+          <img src="/images/logo-white.svg" alt="EVUUS Electronics" class="footer-logo-img" />
+        </a>
       </div>
       <p class="brand-desc">
         Soluciones de computación y tecnología de alta calidad adaptadas a las exigencias del mercado. Equipos portátiles y soluciones integradas para el hogar, PYMES y corporaciones.
@@ -95,24 +96,18 @@ const year = new Date().getFullYear();
   }
 
   .brand-col .footer-logo {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
     margin-bottom: 1rem;
   }
 
-  .footer-logo .logo-text {
-    font-size: 1.8rem;
-    font-weight: 900;
-    letter-spacing: 0.15em;
-    color: var(--white);
+  .footer-logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+    transition: opacity 0.2s ease;
   }
 
-  .footer-logo .logo-sub {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: var(--accent);
+  .footer-logo-img:hover {
+    opacity: 0.85;
   }
 
   .brand-desc {
@@ -131,14 +126,17 @@ const year = new Date().getFullYear();
   .partner-badge {
     height: 32px;
     width: auto;
-    filter: grayscale(100%) brightness(1.5);
-    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3px 6px;
+    border-radius: 4px;
+    opacity: 0.9;
     transition: all 0.2s;
   }
 
   .partner-badge:hover {
-    filter: none;
+    background: #ffffff;
     opacity: 1;
+    transform: translateY(-2px);
   }
 
   .col-title {
