@@ -1,0 +1,296 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navItems = [
+  { name: 'Inicio', path: '/' },
+  { name: 'Productos', path: '/productos' },
+  { name: 'Soporte & Garantía', path: '/soporte' },
+  { name: 'Compras', path: '/compras' },
+  { name: 'Nosotros', path: '/nosotros' },
+  { name: 'Contacto', path: '/contacto' },
+];
+---
+
+<header class="site-header">
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <span>📍 La Castellana, Caracas - Venezuela</span>
+        <span class="separator">|</span>
+        <span>📞 (0212) 524-0825</span>
+        <span class="separator">|</span>
+        <span>✉️ ventas@evuus.com</span>
+      </div>
+      <div class="top-links">
+        <a href="/soporte#garantia">Garantía Oficial</a>
+        <a href="/soporte#drivers">Drivers & Descargas</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-nav">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <div class="logo-mark">
+          <span class="logo-letter">E</span>
+          <div class="logo-accent"></div>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">EVUUS</span>
+          <span class="logo-subtitle">ELECTRONICS & COMPUTERS</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        {navItems.map((item) => (
+          <a
+            href={item.path}
+            class={`nav-link ${currentPath === item.path ? 'active' : ''}`}
+          >
+            {item.name}
+          </a>
+        ))}
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contacto" class="btn btn-primary btn-sm">Cotizar Equipos</a>
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Abrir menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="container mobile-nav-links">
+      {navItems.map((item) => (
+        <a
+          href={item.path}
+          class={`mobile-nav-link ${currentPath === item.path ? 'active' : ''}`}
+        >
+          {item.name}
+        </a>
+      ))}
+      <div class="mobile-cta">
+        <a href="/contacto" class="btn btn-primary" style="width: 100%;">Cotizar Equipos</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+  }
+</script>
+
+<style>
+  .site-header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .top-bar {
+    background-color: var(--dark);
+    color: #94a3b8;
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .top-links {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .top-links a:hover {
+    color: var(--white);
+  }
+
+  .separator {
+    color: #475569;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-mark {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 10px var(--accent-glow);
+  }
+
+  .logo-letter {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+  }
+
+  .logo-accent {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background: #00e5ff;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+  }
+
+  .logo-text-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: var(--dark);
+    line-height: 1.1;
+  }
+
+  .logo-subtitle {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--primary);
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 0.5rem 0.25rem;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary);
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.875rem;
+  }
+
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu {
+    display: none;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 1rem 0 1.5rem;
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mobile-nav-link {
+    padding: 0.5rem 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .mobile-nav-link.active {
+    color: var(--primary);
+  }
+
+  .mobile-cta {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .top-bar {
+      display: none;
+    }
+
+    .desktop-nav, .nav-actions .btn {
+      display: none;
+    }
+
+    .mobile-toggle {
+      display: block;
+    }
+  }
+</style>

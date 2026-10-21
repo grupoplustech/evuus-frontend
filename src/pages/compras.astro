@@ -1,0 +1,278 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Compras Corporativas & Distribución" currentPath="/compras">
+  <div class="page-header">
+    <div class="container">
+      <span class="badge">Adquisición & Canales</span>
+      <h1 class="page-title">Programas de Compra EVUUS</h1>
+      <p class="page-subtitle">
+        Facilitamos la dotación tecnológica de su organización con esquemas comerciales flexibles, facturación en regla y logística confiable.
+      </p>
+    </div>
+  </div>
+
+  <div class="container purchases-container">
+    <div class="programs-grid">
+      <!-- PROGRAM 1: HOGAR -->
+      <div class="program-card">
+        <div class="program-img-box">
+          <img src="/images/hogar.png" alt="Programa Hogar" />
+        </div>
+        <div class="program-body">
+          <span class="badge">Uso Personal</span>
+          <h2 class="program-title">Para el Hogar y la Familia</h2>
+          <p class="program-desc">
+            Adquiera su equipo directamente o a través de nuestra red de distribuidores autorizados en todo el país.
+          </p>
+          <ul class="program-list">
+            <li>Garantía de 1 año con soporte directo en Caracas.</li>
+            <li>Equipos configurados y listos para usar desde el primer día.</li>
+            <li>Asesoría en la selección del modelo ideal (EL-314 vs EL-514/S).</li>
+          </ul>
+          <a href="/productos" class="btn btn-outline" style="width: 100%;">Ver Modelos</a>
+        </div>
+      </div>
+
+      <!-- PROGRAM 2: PYMES -->
+      <div class="program-card featured">
+        <div class="featured-badge">Solución PYME</div>
+        <div class="program-img-box">
+          <img src="/images/pymes.png" alt="Programa PYMES" />
+        </div>
+        <div class="program-body">
+          <span class="badge">Empresarial</span>
+          <h2 class="program-title">Pequeñas y Medianas Empresas</h2>
+          <p class="program-desc">
+            Planes diseñados para equipar oficinas contables, firmas legales, comercios y agencias con costos competitivos.
+          </p>
+          <ul class="program-list">
+            <li>Precios preferenciales a partir de 3 unidades.</li>
+            <li>Soporte técnico preferencial y sustitución inmediata ante fallas.</li>
+            <li>Modalidad de facturación personalizada y despacho directo.</li>
+          </ul>
+          <a href="/contacto?tipo=pymes" class="btn btn-primary" style="width: 100%;">Solicitar Cotización PYME</a>
+        </div>
+      </div>
+
+      <!-- PROGRAM 3: GOBIERNO & CORP -->
+      <div class="program-card" id="corporativo">
+        <div class="program-img-box">
+          <img src="/images/gobierno.png" alt="Gobierno y Corporaciones" />
+        </div>
+        <div class="program-body">
+          <span class="badge">Gran Escala</span>
+          <h2 class="program-title">Gobierno y Grandes Empresas</h2>
+          <p class="program-desc">
+            Solidez financiera y logística para licitaciones públicas y privadas, renovaciones masivas de parque tecnológico.
+          </p>
+          <ul class="program-list">
+            <li>Capacidad de suministro masivo de laptops y computadoras All in One.</li>
+            <li>Personalización de imágenes de sistema y pre-configuración de red.</li>
+            <li>Cumplimiento estricto de requerimientos legales y contratos marco.</li>
+          </ul>
+          <a href="/contacto?tipo=corporativo" class="btn btn-outline" style="width: 100%;">Contactar a División Corporativa</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISTRIBUTORS SECTION -->
+    <section class="distributors-box">
+      <div class="dist-content">
+        <h2>¿Desea formar parte de la Red de Distribuidores EVUUS?</h2>
+        <p>
+          Si es integrador de tecnología, mayorista de informática o tiene un comercio del ramo en Venezuela o Latinoamérica, incorpore la línea EVUUS a su portafolio con márgenes atractivos y respaldo de fábrica.
+        </p>
+        <div class="dist-benefits">
+          <div>💎 Margen comercial protegido</div>
+          <div>📦 Despacho asegurado</div>
+          <div>🛠️ Soporte técnico de segundo nivel</div>
+        </div>
+      </div>
+      <div class="dist-action">
+        <a href="mailto:ventas@evuus.com?subject=Interes en Distribucion Comercial EVUUS" class="btn btn-primary">Registrarse como Distribuidor</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin: 0.75rem 0;
+  }
+
+  .page-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .purchases-container {
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .program-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .program-card.featured {
+    border-color: var(--primary);
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 86, 179, 0.1);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+  }
+
+  .program-img-box {
+    background-color: var(--bg-light);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .program-img-box img {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .program-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .program-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .program-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .program-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 2rem;
+  }
+
+  .program-list li::before {
+    content: "✓ ";
+    color: var(--primary);
+    font-weight: bold;
+  }
+
+  .program-body a {
+    margin-top: auto;
+  }
+
+  .distributors-box {
+    background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+    border-radius: var(--radius);
+    padding: 3.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .dist-content h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+
+  .dist-content p {
+    color: #94a3b8;
+    max-width: 650px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .dist-benefits {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #38bdf8;
+  }
+
+  .dist-action {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 992px) {
+    .programs-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .distributors-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .dist-benefits {
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros - EVUUS Electronics" currentPath="/nosotros">
+  <div class="page-header">
+    <div class="container">
+      <span class="badge">Nuestra Trayectoria</span>
+      <h1 class="page-title">Sobre EVUUS Electronics</h1>
+      <p class="page-subtitle">
+        Comprometidos con democratizar el acceso a la computación portátil de calidad y alto desempeño.
+      </p>
+    </div>
+  </div>
+
+  <div class="container about-container">
+    <section class="about-grid">
+      <div class="about-text">
+        <h2>Tecnología a su Alcance</h2>
+        <p>
+          <strong>EVUUS</strong> nació como una iniciativa tecnológica orientada a brindar soluciones integrales de computación personal, corporativa e institucional. En un mercado altamente competitivo, nos hemos diferenciado por seleccionar arquitecturas robustas basadas en procesadores Intel®, estándares de ensamble certificados y, muy especialmente, un sólido servicio post-venta y garantía local.
+        </p>
+        <p>
+          Creemos firmemente que contar con herramientas informáticas eficientes y duraderas es el motor que impulsa el estudio, el emprendimiento y el crecimiento de las pequeñas y medianas empresas.
+        </p>
+        <div class="about-stats">
+          <div class="stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-desc">Componentes Testeados</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">Intel®</span>
+            <span class="stat-desc">Arquitectura Certificada</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">1 Año</span>
+            <span class="stat-desc">Garantía Directa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <img src="/images/banner2.jpg" alt="EVUUS Trayectoria y Calidad" class="about-img" />
+        <div class="about-quote">
+          "Innovación con sentido práctico: tecnología confiable para quienes mueven la economía."
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <h2 class="section-title">Nuestros Pilares</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <h3>Calidad de Ensamble</h3>
+          <p>Selección rigurosa de tarjetas madres, procesadores y pantallas LED que garantizan durabilidad y bajo índice de retorno.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <h3>Cercanía & Confianza</h3>
+          <p>Atención directa sin intermediarios confusos. Hablamos el mismo idioma de nuestros clientes en Caracas y todo el país.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🔧</div>
+          <h3>Disponibilidad de Partes</h3>
+          <p>Mantenemos stock de cargadores, baterías, pantallas y repuestos para que un equipo nunca quede desamparado.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin: 0.75rem 0;
+  }
+
+  .page-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .about-container {
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 1.85rem;
+    font-weight: 900;
+    color: var(--primary);
+  }
+
+  .stat-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .about-quote {
+    background: var(--white);
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary);
+    font-style: italic;
+    color: var(--dark);
+    margin-top: -30px;
+    margin-left: 20px;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .value-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

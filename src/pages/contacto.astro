@@ -1,0 +1,281 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto & Ubicación" currentPath="/contacto">
+  <div class="page-header">
+    <div class="container">
+      <span class="badge">Atención Comercial y Soporte</span>
+      <h1 class="page-title">Contáctenos</h1>
+      <p class="page-subtitle">
+        Estamos a su entera disposición en Caracas para resolver sus dudas, asesorarle en compras y coordinar soporte técnico.
+      </p>
+    </div>
+  </div>
+
+  <div class="container contact-container">
+    <div class="contact-grid">
+      <!-- INFO SIDE -->
+      <div class="contact-info-col">
+        <div class="info-card">
+          <h2 class="info-title">Canales de Contacto Directo</h2>
+          <p class="info-desc">
+            Comuníquese con nuestros ejecutivos de cuentas o con el departamento de soporte según su requerimiento.
+          </p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                <strong>Oficinas Corporativas</strong>
+                <p>Urbanización La Castellana, Municipio Chacao<br />Caracas, Estado Miranda, Venezuela.</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <strong>Líneas Telefónicas</strong>
+                <p>Master: (0212) 524 08 25 / (0212) 524 07 20<br />Atención Corporativa: +58 (412) 924 36 57</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-text">
+                <strong>Correos Electrónicos</strong>
+                <p>Ventas & Cotizaciones: <a href="mailto:ventas@evuus.com">ventas@evuus.com</a><br />
+                Soporte y Garantías: <a href="mailto:soporte@evuus.com">soporte@evuus.com</a><br />
+                Administración: <a href="mailto:administracion@evuus.com">administracion@evuus.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">⏰</div>
+              <div class="info-text">
+                <strong>Horario de Atención</strong>
+                <p>Lunes a Viernes de 8:30 AM a 5:00 PM (Hora de Venezuela)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM SIDE -->
+      <div class="contact-form-col">
+        <div class="form-wrapper">
+          <h3 class="form-heading">Envíenos un Mensaje</h3>
+          <p class="form-sub">Complete el formulario y le responderemos a la brevedad posible.</p>
+
+          <form action="mailto:ventas@evuus.com" method="GET" class="main-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="contact-name">Nombre y Apellido / Razón Social *</label>
+                <input type="text" id="contact-name" name="name" required placeholder="Ej. Carlos Mendoza" />
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">Teléfono de Contacto *</label>
+                <input type="tel" id="contact-phone" name="phone" required placeholder="Ej. +58 412 1234567" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Correo Electrónico Corporativo / Personal *</label>
+              <input type="email" id="contact-email" name="email" required placeholder="carlos@empresa.com" />
+            </div>
+
+            <div class="form-field">
+              <label for="contact-dept">Departamento Destino</label>
+              <select id="contact-dept" name="subject">
+                <option value="Cotizacion Ventas Laptops">Ventas y Cotizaciones (Laptops / All in One)</option>
+                <option value="Soporte Tecnico y Repuestos">Soporte Técnico, Garantía y Repuestos</option>
+                <option value="Alianza Comercial Mayorista">Alianzas Comerciales y Distribución</option>
+                <option value="Administracion y Finanzas">Administración y Facturación</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-msg">Detalle de su Requerimiento *</label>
+              <textarea id="contact-msg" name="body" rows="5" required placeholder="Indique modelo de interés, número de unidades o detalles de la solicitud..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Enviar Mensaje Directo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+    padding: 4rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--dark);
+    margin: 0.75rem 0;
+  }
+
+  .page-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contact-container {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3.5rem;
+  }
+
+  .info-card {
+    background: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .info-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .info-icon {
+    font-size: 1.6rem;
+    background: var(--bg-light);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  .info-text strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--dark);
+    margin-bottom: 0.35rem;
+  }
+
+  .info-text p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .info-text a {
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  .form-wrapper {
+    background: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .form-heading {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--primary);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card, .form-wrapper {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,230 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col brand-col">
+      <div class="footer-logo">
+        <span class="logo-text">EVUUS</span>
+        <span class="logo-sub">ELECTRONICS</span>
+      </div>
+      <p class="brand-desc">
+        Soluciones de computación y tecnología de alta calidad adaptadas a las exigencias del mercado. Equipos portátiles y soluciones integradas para el hogar, PYMES y corporaciones.
+      </p>
+      <div class="cert-badges">
+        <img src="/images/logointel.png" alt="Intel Inside" class="partner-badge" />
+        <img src="/images/logowindows.png" alt="Windows Compatible" class="partner-badge" />
+        <img src="/images/logohdmi.png" alt="HDMI Ready" class="partner-badge" />
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Productos</h4>
+      <ul class="col-links">
+        <li><a href="/productos#el-314">Laptop EVUUS EL-314</a></li>
+        <li><a href="/productos#el-314-p">Laptop EVUUS EL-314/P</a></li>
+        <li><a href="/productos#el-514-s">Laptop EVUUS EL-514/S</a></li>
+        <li><a href="/productos#aio">Sistemas All in One</a></li>
+        <li><a href="/productos">Catálogo Completo</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Soporte & Garantía</h4>
+      <ul class="col-links">
+        <li><a href="/soporte#garantia">Póliza de Garantía</a></li>
+        <li><a href="/soporte#drivers">Centro de Descarga de Drivers</a></li>
+        <li><a href="/soporte#centros">Centros de Servicio Autorizados</a></li>
+        <li><a href="/soporte#faq">Preguntas Frecuentes</a></li>
+        <li><a href="mailto:soporte@evuus.com">soporte@evuus.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="col-title">Contacto Corporativo</h4>
+      <ul class="contact-list">
+        <li>
+          <span class="icon">📍</span>
+          <span>Urbanización La Castellana, Caracas - Venezuela</span>
+        </li>
+        <li>
+          <span class="icon">📞</span>
+          <span>(0212) 524 08 25 / 524 07 20</span>
+        </li>
+        <li>
+          <span class="icon">✉️</span>
+          <span>ventas@evuus.com / info@evuus.com</span>
+        </li>
+        <li>
+          <span class="icon">🏢</span>
+          <span>EVS Tech / Evuus Electronics, LLC</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container bottom-content">
+      <p class="copy">
+        &copy; {year} EVUUS Electronics, LLC. Todos los derechos reservados. Tecnología a su alcance.
+      </p>
+      <div class="bottom-links">
+        <a href="/privacidad">Privacidad</a>
+        <a href="/terminos">Términos de Garantía</a>
+        <a href="/contacto">Atención al Cliente</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--dark);
+    color: #94a3b8;
+    padding-top: 4.5rem;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .brand-col .footer-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo .logo-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: var(--white);
+  }
+
+  .footer-logo .logo-sub {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+  }
+
+  .brand-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #94a3b8;
+  }
+
+  .cert-badges {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .partner-badge {
+    height: 32px;
+    width: auto;
+    filter: grayscale(100%) brightness(1.5);
+    opacity: 0.7;
+    transition: all 0.2s;
+  }
+
+  .partner-badge:hover {
+    filter: none;
+    opacity: 1;
+  }
+
+  .col-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .col-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .col-links a {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    transition: color 0.2s;
+  }
+
+  .col-links a:hover {
+    color: var(--white);
+    padding-left: 4px;
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-list li {
+    display: flex;
+    gap: 0.65rem;
+    line-height: 1.5;
+  }
+
+  .contact-list .icon {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    background-color: #0b1120;
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .bottom-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .bottom-links a:hover {
+    color: var(--white);
+  }
+
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .bottom-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

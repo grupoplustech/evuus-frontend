@@ -1,0 +1,748 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Tecnología a su Alcance" currentPath="/">
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">Tecnología de Alto Rendimiento</span>
+        <h1 class="hero-title">
+          Potencia, Confiabilidad y <span class="highlight">Tecnología a su Alcance</span>
+        </h1>
+        <p class="hero-desc">
+          En <strong>EVUUS</strong> diseñamos soluciones portátiles e integradas para personas, pymes y el sector corporativo. Equipos respaldados con garantía oficial y soporte técnico directo en Venezuela.
+        </p>
+        <div class="hero-cta-group">
+          <a href="/productos" class="btn btn-primary">Explorar Laptops</a>
+          <a href="/contacto" class="btn btn-outline">Solicitar Cotización</a>
+        </div>
+        <div class="hero-badges">
+          <div class="badge-item">
+            <span class="badge-num">100%</span>
+            <span class="badge-label">Garantía Directa</span>
+          </div>
+          <div class="badge-divider"></div>
+          <div class="badge-item">
+            <span class="badge-num">Intel®</span>
+            <span class="badge-label">Procesadores Certificados</span>
+          </div>
+          <div class="badge-divider"></div>
+          <div class="badge-item">
+            <span class="badge-num">HD</span>
+            <span class="badge-label">Pantallas LED WXGA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card-glow"></div>
+        <div class="hero-slider-wrap">
+          <img src="/images/banner1.jpg" alt="EVUUS Laptops & Computers" class="hero-img active" id="hero-slide-1" />
+          <div class="slide-caption">
+            <strong>Nueva Serie EVUUS EL-314</strong>
+            <span>Portabilidad inteligente con procesadores Intel®</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET SEGMENTS -->
+  <section class="segments-section">
+    <div class="container">
+      <h2 class="section-title">Soluciones Adaptadas a sus Necesidades</h2>
+      <p class="section-subtitle">
+        Para EVUUS no hay clientes grandes ni pequeños. Proveemos equipos robustos y eficientes diseñados específicamente para cada nivel de exigencia.
+      </p>
+
+      <div class="segments-grid">
+        <div class="segment-card">
+          <div class="segment-icon-wrap">
+            <img src="/images/hogar.png" alt="Hogar y Estudiantes" class="segment-icon" />
+          </div>
+          <h3 class="segment-title">Hogar & Estudiantes</h3>
+          <p class="segment-text">
+            Equipos confiables, versátiles y de precio accesible. Ideales para tareas escolares, entretenimiento multimedia en alta definición y teletrabajo diario.
+          </p>
+          <ul class="segment-features">
+            <li>✓ Pantallas LED de alta nitidez</li>
+            <li>✓ Salida HDMI y audio envolvente</li>
+            <li>✓ Baterías de larga duración</li>
+          </ul>
+          <a href="/productos" class="segment-link">Ver equipos recomendados →</a>
+        </div>
+
+        <div class="segment-card featured">
+          <div class="featured-tag">Más Solicitado</div>
+          <div class="segment-icon-wrap">
+            <img src="/images/pymes.png" alt="Pequeña y Mediana Empresa" class="segment-icon" />
+          </div>
+          <h3 class="segment-title">Pequeñas y Medianas Empresas</h3>
+          <p class="segment-text">
+            Potencia tu negocio sin comprometer tu presupuesto. Rendimiento superior en ofimática, sistemas administrativos y ventas con garantía extendida.
+          </p>
+          <ul class="segment-features">
+            <li>✓ Intel® Core™ i3 y Core™ i5</li>
+            <li>✓ Soporte técnico prioritario</li>
+            <li>✓ Facilidades de volumen corporativo</li>
+          </ul>
+          <a href="/compras" class="segment-link">Planes para PYMES →</a>
+        </div>
+
+        <div class="segment-card">
+          <div class="segment-icon-wrap">
+            <img src="/images/gobierno.png" alt="Gobierno y Corporaciones" class="segment-icon" />
+          </div>
+          <h3 class="segment-title">Gobierno y Corporaciones</h3>
+          <p class="segment-text">
+            Capacidad para abastecer proyectos de gran envergadura, licitaciones gubernamentales y renovación tecnológica de departamentos completos.
+          </p>
+          <ul class="segment-features">
+            <li>✓ Homologación y certificaciones</li>
+            <li>✓ Configuración a la medida</li>
+            <li>✓ Entrega y despacho a nivel nacional</li>
+          </ul>
+          <a href="/compras#corporativo" class="segment-link">Consultar despacho masivo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="badge">Nuestra Línea de Portátiles</span>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 0.25rem;">Equipos Destacados EVUUS</h2>
+          <p style="color: var(--text-muted);">Calidad de ensamblaje, componentes de primera línea y rendimiento comprobado.</p>
+        </div>
+        <a href="/productos" class="btn btn-outline">Ver Todo el Catálogo</a>
+      </div>
+
+      <div class="products-grid">
+        <!-- EL-314 -->
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/images/laptop3141.png" alt="Laptop EVUUS EL-314" class="product-img" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Serie Estándar</span>
+            <h3 class="product-name">EVUUS EL-314</h3>
+            <p class="product-summary">La laptop ideal para productividad diaria, estudio y oficina con excelente balance costo-beneficio.</p>
+            <div class="specs-tags">
+              <span>Intel® Core™ i3</span>
+              <span>14.0" LED HD</span>
+              <span>HDMI / Wi-Fi b/g/n</span>
+              <span>2.2 Kg</span>
+            </div>
+            <div class="product-footer">
+              <a href="/productos#el-314" class="btn btn-outline" style="width: 100%;">Ficha Técnica Completa</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EL-314/P -->
+        <div class="product-card">
+          <div class="product-image-wrap">
+            <img src="/images/laptop3142.png" alt="Laptop EVUUS EL-314/P" class="product-img" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Serie Profesional</span>
+            <h3 class="product-name">EVUUS EL-314/P</h3>
+            <p class="product-summary">Mayor capacidad multitarea y memoria optimizada para usuarios que demandan estabilidad en su jornada laboral.</p>
+            <div class="specs-tags">
+              <span>Intel® Core™ i3 2.53GHz</span>
+              <span>4GB DDR3 RAM</span>
+              <span>Disco 500GB</span>
+              <span>Bluetooth + HDMI</span>
+            </div>
+            <div class="product-footer">
+              <a href="/productos#el-314-p" class="btn btn-outline" style="width: 100%;">Ficha Técnica Completa</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EL-514/S -->
+        <div class="product-card featured-product">
+          <div class="featured-badge-pro">Alto Rendimiento</div>
+          <div class="product-image-wrap">
+            <img src="/images/laptop.jpg" alt="Laptop EVUUS EL-514/S" class="product-img" />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Serie Avanzada</span>
+            <h3 class="product-name">EVUUS EL-514/S</h3>
+            <p class="product-summary">Poder y velocidad superior con procesador Intel® Core™ i5. Gráficos avanzados y máxima respuesta.</p>
+            <div class="specs-tags">
+              <span>Intel® Core™ i5 2.50GHz</span>
+              <span>Intel® HD Graphics 3000</span>
+              <span>Pantalla 14" WXGA HD</span>
+              <span>Webcam HD Integrada</span>
+            </div>
+            <div class="product-footer">
+              <a href="/productos#el-514-s" class="btn btn-primary" style="width: 100%;">Ficha Técnica & Cotización</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARRANTY & SUPPORT BANNER -->
+  <section class="warranty-section">
+    <div class="container warranty-box">
+      <div class="warranty-content">
+        <img src="/images/Garantia2.png" alt="Garantía Oficial Evuus" class="warranty-badge" />
+        <div class="warranty-text">
+          <h3 class="warranty-title">Garantía y Respaldo Oficial EVUUS</h3>
+          <p class="warranty-desc">
+            Al adquirir un equipo EVUUS, cuentas con la certeza de un producto rigurosamente probado con centros de soporte técnico directo, repuestos y controladores disponibles permanentemente.
+          </p>
+        </div>
+      </div>
+      <div class="warranty-actions">
+        <a href="/soporte" class="btn btn-primary">Centro de Servicio</a>
+        <a href="/soporte#drivers" class="btn btn-outline" style="background: white;">Descargar Drivers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK CONTACT FORM -->
+  <section class="cta-contact-section">
+    <div class="container cta-container">
+      <div class="cta-intro">
+        <h2 class="cta-heading">¿Listo para equipar su empresa u hogar?</h2>
+        <p class="cta-sub">
+          Contáctenos directamente en Caracas o escríbanos para recibir una propuesta comercial a la medida de su requerimiento.
+        </p>
+        <div class="cta-contact-details">
+          <p><strong>📞 Teléfonos:</strong> (0212) 524 08 25 / (0212) 524 07 20</p>
+          <p><strong>✉️ Correo de ventas:</strong> ventas@evuus.com</p>
+          <p><strong>📍 Sede:</strong> Urb. La Castellana, Caracas, Venezuela</p>
+        </div>
+      </div>
+
+      <div class="cta-form-card">
+        <h3 class="form-title">Solicitud de Información / Cotización</h3>
+        <form class="contact-form" action="mailto:ventas@evuus.com" method="GET">
+          <div class="form-group">
+            <label for="name">Nombre / Razón Social</label>
+            <input type="text" id="name" name="name" required placeholder="Ej. Inversiones Alfa, C.A." />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required placeholder="contacto@empresa.com" />
+          </div>
+          <div class="form-group">
+            <label for="interest">Equipo de Interés</label>
+            <select id="interest" name="subject">
+              <option value="Cotizacion Laptop EL-314">Laptop EVUUS EL-314</option>
+              <option value="Cotizacion Laptop EL-314/P">Laptop EVUUS EL-314/P</option>
+              <option value="Cotizacion Laptop EL-514/S">Laptop EVUUS EL-514/S (Core i5)</option>
+              <option value="Cotizacion Lote Corporativo">Lote de Equipos para Empresas</option>
+              <option value="Soporte y Garantia">Servicio Técnico y Repuestos</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje a Ventas</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* HERO */
+  .hero-section {
+    padding: 3.5rem 0 4.5rem;
+    background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 2.9rem;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--dark);
+    margin: 1.25rem 0 1rem;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-title .highlight {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-badges {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .badge-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .badge-num {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--dark);
+  }
+
+  .badge-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .badge-divider {
+    width: 1px;
+    height: 32px;
+    background-color: var(--border);
+  }
+
+  .hero-media {
+    position: relative;
+  }
+
+  .hero-card-glow {
+    position: absolute;
+    inset: -15px;
+    background: linear-gradient(135deg, var(--accent-glow) 0%, transparent 60%);
+    border-radius: var(--radius);
+    filter: blur(20px);
+    z-index: 1;
+  }
+
+  .hero-slider-wrap {
+    position: relative;
+    z-index: 2;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background-color: var(--white);
+    border: 1px solid var(--border);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .slide-caption {
+    padding: 1rem 1.25rem;
+    background-color: var(--white);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide-caption strong {
+    color: var(--dark);
+    font-size: 0.95rem;
+  }
+
+  .slide-caption span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+
+  /* SEGMENTS */
+  .segments-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+  }
+
+  .segments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .segment-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .segment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .segment-card.featured {
+    border-color: var(--primary);
+    background-color: var(--white);
+    box-shadow: 0 8px 24px rgba(0, 86, 179, 0.08);
+  }
+
+  .featured-tag {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+  }
+
+  .segment-icon-wrap {
+    margin-bottom: 1.5rem;
+  }
+
+  .segment-icon {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+  }
+
+  .segment-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .segment-text {
+    font-size: 0.925rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .segment-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.875rem;
+    color: var(--text-main);
+  }
+
+  .segment-link {
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .segment-link:hover {
+    text-decoration: underline;
+  }
+
+  /* PRODUCTS SECTION */
+  .products-section {
+    padding: 5rem 0;
+  }
+
+  .section-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .product-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .featured-product {
+    border-color: #00a8ff;
+    position: relative;
+  }
+
+  .featured-badge-pro {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #00a8ff;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  .product-image-wrap {
+    height: 240px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .product-img {
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .product-info {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .product-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .product-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 0.65rem;
+  }
+
+  .product-summary {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .specs-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .specs-tags span {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: #475569;
+    font-weight: 500;
+  }
+
+  .product-footer {
+    margin-top: auto;
+  }
+
+  /* WARRANTY */
+  .warranty-section {
+    padding: 2rem 0;
+  }
+
+  .warranty-box {
+    background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+    border-radius: var(--radius);
+    padding: 3rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .warranty-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .warranty-badge {
+    width: 90px;
+    height: auto;
+  }
+
+  .warranty-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .warranty-desc {
+    color: #94a3b8;
+    max-width: 600px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .warranty-actions {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* CTA CONTACT */
+  .cta-contact-section {
+    padding: 5rem 0 2rem;
+  }
+
+  .cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .cta-heading {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .cta-sub {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .cta-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+
+  .cta-form-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+  }
+
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: var(--primary);
+  }
+
+  @media (max-width: 992px) {
+    .hero-container,
+    .cta-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .segments-grid,
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .warranty-box {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .warranty-content {
+      flex-direction: column;
+    }
+
+    .warranty-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+</style>
